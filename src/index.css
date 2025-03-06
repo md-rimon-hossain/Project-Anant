@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img {
+  max-width: 200%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  /* font-family: sans-serif; */
+  background-color: #140000;
+}
+
+/* Hide scrollbar for Firefox */
+.hide-scrollbar {
+  scrollbar-width: none; /* for Firefox */
+}
+
+/* Customize scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Scrollbar Track (the area the thumb slides within) */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Scrollbar Thumb (the part you drag) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #f0474a 0%, #fdaf18 100%);
+  border-radius: 2px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Hover effect for the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #fdaf18 0%, #f0474a 100%);
+  animation: 1s ease-in-out;
+}
