@@ -11,7 +11,7 @@ const TokenomicsSection = () => {
   const [copied, setCopied] = useState(false);
 
   const allocations: AllocationItem[] = [
-    { percentage: 40, title: "Public Sale", color: "bg-[#4CAF50]" },
+    { percentage: 40, title: "Sale", color: "bg-[#4CAF50]" },
     {
       percentage: 25,
       title: "Token Burning",
@@ -34,7 +34,10 @@ const TokenomicsSection = () => {
   };
 
   return (
-    <section id="tokenomics" className="py-16 px-4 bg-[#f1f0f0] relative overflow-hidden">
+    <section
+      id="tokenomics"
+      className="py-16 px-4 bg-[#f1f0f0] relative overflow-hidden"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Section Heading */}
         <div className="text-center mb-16">
@@ -112,7 +115,7 @@ const TokenomicsSection = () => {
           <div className="space-y-20 pl-8">
             <div className="relative max-w-2xl mx-auto">
               <div className="absolute -left-14 top-2 w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-lg">03</span>
+                <span className="text-white font-bold text-lg">01</span>
               </div>
               <div className="bg-white p-8 rounded-2xl shadow-lg">
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">
@@ -128,7 +131,7 @@ const TokenomicsSection = () => {
 
             <div className="relative max-w-2xl mx-auto">
               <div className="absolute -left-14 top-2 w-10 h-10 rounded-full bg-green-600 flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-lg">04</span>
+                <span className="text-white font-bold text-lg">02</span>
               </div>
               <div className="bg-white p-8 rounded-2xl shadow-lg">
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">
