@@ -6,18 +6,17 @@ import Roadmap from "./components/Roadmap";
 import TokenomicsSection from "./components/TokenomicsSection";
 import { ContactSection } from "./components/ContactSection";
 import Footer from "./components/Footer";
+import { ConnectButton } from "./components/ConnectButton";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // These would be replaced with actual imgs from the site
-
   return (
     <div className="min-h-screen bg-white text-white">
-      {/* Header - Exact match to the original */}
+      {/* Header */}
       <header className="flex justify-between items-center py-5 px-4 md:px-4">
         <div className="flex items-center">
-          <img src={logo} alt="" className="w-8 h-8 mr-2" />
+          <img src={logo} alt="Project Logo" className="w-8 h-8 mr-2" />
           <div className="font-bold text-black text-sm leading-tight">
             <div>Project</div>
             <div>Anant</div>
@@ -30,7 +29,7 @@ export default function Home() {
             About
           </a>
           <a href="#tokenomics" className="hover:text-gray-400 transition-colors">
-          tokenomics
+            Tokenomics
           </a>
           <a href="#roadmap" className="hover:text-gray-400 transition-colors">
             Roadmap
@@ -39,6 +38,11 @@ export default function Home() {
             Contact
           </a>
         </nav>
+
+        {/* Wallet Connect Button for Desktop */}
+        <div className="hidden lg:block">
+          <ConnectButton />
+        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -70,55 +74,49 @@ export default function Home() {
 
         <nav className="flex flex-col items-center justify-center h-full space-y-8 text-2xl">
           <a
-          onClick={() => setIsMenuOpen(false)}
+            onClick={() => setIsMenuOpen(false)}
             href="#about"
             className={`text-white hover:text-gray-400 transition-all duration-300 ${
-              isMenuOpen
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-4"
+              isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             } delay-100`}
           >
             About
           </a>
           <a
-          onClick={() => setIsMenuOpen(false)}
+            onClick={() => setIsMenuOpen(false)}
             href="#tokenomics"
             className={`text-white hover:text-gray-400 transition-all duration-300 ${
-              isMenuOpen
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-4"
+              isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             } delay-200`}
           >
             Tokenomics
           </a>
           <a
-          onClick={() => setIsMenuOpen(false)}
+            onClick={() => setIsMenuOpen(false)}
             href="#roadmap"
             className={`text-white hover:text-gray-400 transition-all duration-300 ${
-              isMenuOpen
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-4"
+              isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             } delay-300`}
           >
             Roadmap
           </a>
           <a
-          onClick={() => setIsMenuOpen(false)}
+            onClick={() => setIsMenuOpen(false)}
             href="#contact"
             className={`text-white hover:text-gray-400 transition-all duration-300 ${
-              isMenuOpen
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-4"
+              isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             } delay-400`}
           >
             Contact
           </a>
+          {/* Optionally, include the wallet connect button in the mobile menu */}
+          <div className="mt-4">
+            <ConnectButton />
+          </div>
         </nav>
       </div>
 
-      {/* Hero Carousel - Exact match to the original with no visible controls */}
-      {/* <Carousel imgs={carouselimgs} height="h-[40vh] md:h-[50vh]" /> */}
-
+      {/* Hero Carousel */}
       <div id="about" className="h-[90vh] bg-white text-black relative px-3">
         <div className="flex flex-row gap-4 ">
           <VerticalCarousel
@@ -167,7 +165,7 @@ export default function Home() {
             direction="top"
           />
         </div>
-        <div className="absolute w-full  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white py-24 md:py-32 px-4 text-center text-black">
+        <div className="absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white py-24 md:py-32 px-4 text-center text-black">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight max-w-4xl mx-auto">
             Welcome to Project Anant Coin
             <br />
@@ -183,12 +181,12 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Main Content - Exact spacing and typography to match original */}
+      {/* Main Content */}
       <TokenomicsSection />
       <Roadmap />
       <ContactSection />
       
-      {/* Footer - Exact match to the original */}
+      {/* Footer */}
       <Footer />
     </div>
   );
