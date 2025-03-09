@@ -14,10 +14,10 @@ const projectId = '16a0d7cd830c7a5d02d0b976ec405643';
 
 // 2. Create a metadata object (optional but recommended)
 const metadata = {
-  name: 'AppKit',
-  description: 'AppKit Example',
-  url: 'https://bsc-connect.netlify.app/', // Should match your app domain
-  icons: ['https://avatars.githubusercontent.com/u/179229932']
+  name: 'Project Anant Coin',
+  description: 'Project Anant Coin Wallet Connect',
+  url: 'https://project-anant-ten.vercel.app/', // Should match your app domain
+  icons: ['https://project-anant-ten.vercel.app/logo.jpg']
 };
 
 // 3. Set the networks you want to support
